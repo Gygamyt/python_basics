@@ -12,8 +12,8 @@ class DriverFactory:
         else:
             raise ValueError('Browser must be either "chrome" or "firefox"')
 
-    def open(self, url):
-        self.browser.get(url)
+        self.browser.maximize_window()
+        self.browser.implicitly_wait(5)
 
     def shutDownBrowser(self):
         self.browser.quit()
